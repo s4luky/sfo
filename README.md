@@ -1,8 +1,5 @@
-# Background-Modeling
-Dual background modeling to detect static objects
-
-Terminal
-MAC & UBUNTU: python3 left-luggage-detection.py
+File video dapat diakses dari
+data temporer abandoned object detection (taod) di https://drive.google.com/drive/folders/1osbIjQ_kG2GNIXcPalZnGbnhH-l-SGyv?usp=sharing 
 
 requirements:
 python3 
