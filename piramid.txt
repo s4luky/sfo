@@ -1,0 +1,22 @@
+
+def PiramidKalmanPredict(KalmanFilter, Piramid):
+    # Inisialisasi variabel
+    N = len(Piramid)
+
+    for i in range(N):
+        # Prediksi pada setiap level piramida
+        KalmanPredict(KalmanFilter[i])
+
+    # Integrasi informasi dari setiap level piramida
+    state_prediction = []
+    for i in range(N):
+        # Mendapatkan prediksi nilai state pada level i
+        state_prediction.append(KalmanFilter[i].predicted_state)
+
+    # Gabungkan informasi dari setiap level piramida
+    # Misalnya, menggunakan Gaussian Pyramid Blending
+    final_state_prediction = GaussianPyramidBlend(state_prediction, Piramid)
+
+    # Mengembalikan prediksi nilai state yang telah digabungkan
+    return final_state_prediction
+
